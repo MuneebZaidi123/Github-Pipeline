@@ -13,7 +13,8 @@ jobs:
     environment: 
       name: ${{ github.event.inputs.message }}
     steps:
-      run: echo "the Value is $URL"
+    - name: Echo Environment URL
+      run: echo "The URL for the environment is $URL"
       env:
-        URL: ${{ variables.URL}}
+        URL: ${{ variables.URL }}
     
