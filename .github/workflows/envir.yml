@@ -17,4 +17,4 @@ jobs:
       - name: Echo ${{ github.event.inputs.message }} URL
         run: echo "The URL is $URL"
         env:
-          URL: ${{ secrets.URL }}
+          URL: ${{ vars.URL }}
