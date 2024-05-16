@@ -1,4 +1,4 @@
-name: Environment Variables Example
+name: ENV URLS
 
 on:
   workflow_dispatch:
@@ -14,7 +14,7 @@ jobs:
     environment: 
       name: ${{ github.event.inputs.message }}
     steps:
-      - name: Echo Environment Variable
-        run: echo "The Value is $URL"
+      - name: Echo ${{ github.event.inputs.message }} URL
+        run: echo "The URL is $URL"
         env:
-          URL: ${{ vars.URLS }}
+          URL: ${{ secrets.URL }}
