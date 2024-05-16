@@ -17,4 +17,4 @@ jobs:
       - name: Echo Environment Variable
         run: echo "The Value is $URL"
         env:
-          URL: ${{ secrets.URLS }}
+          URL: ${{ vars.URLS }}
